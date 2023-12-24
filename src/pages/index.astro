@@ -1,15 +1,33 @@
 ---
 import ActionButton from "../components/ActionButton.vue";
 import PageLayout from "../layouts/PageLayout.astro";
+import TheHero from "../components/TheHero.vue";
 ---
 
 <PageLayout>
-    <h1>Hello, World!</h1>
-    <ActionButton />
+  <TheHero />
+  <h1>Hello, World!</h1>
+  <ActionButton />
+  <svg
+    class="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 196.32 170.02"
+  >
+    <path
+      fill="#42b883"
+      d="M120.83 0L98.16 39.26 75.49 0H0l98.16 170.02L196.32 0h-75.49z"></path>
+    <path
+      fill="#35495e"
+      d="M120.83 0L98.16 39.26 75.49 0H39.26l58.9 102.01L157.06 0h-36.23z"
+    ></path>
+  </svg>
 </PageLayout>
 
 <style>
   h1 {
     color: orange;
+  }
+  .icon {
+    max-width: 50px;
   }
 </style>
