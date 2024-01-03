@@ -9,26 +9,81 @@
       <div>
         <h1 class="text-5xl font-bold">Tio Rambe Putra</h1>
         <p class="py-6">My toolbox fills with:</p>
-        <div v-for="(item, index) in toolsImg" :key="index">
-          <img :src="item.link" alt="" />
-          <p>{{ item.name }}</p>
+        <div class="flex items-center">
+          <img class="p-2 w-20 h-20 me-2" :src="toolsImg" alt="tools" />
+          <p class="text-5xl">{{ toolsName }}</p>
         </div>
+
+        <p>Soon to be added:</p>
+        <ul>
+          <li>Excel</li>
+          <li>PostgreSQL</li>
+        </ul>
+        <!-- <div class="flex flex-wrap"> -->
+        <!--   <div class="flex" v-for="(item, index) in toolsImg" :key="index"> -->
+        <!--     <img -->
+        <!--       class="p-2 w-20 h-20 border border-gray-300" -->
+        <!--       :src="item.link" -->
+        <!--       alt="" -->
+        <!--     /> -->
+        <!--     <p class="text-xl">{{ item.name }}</p> -->
+        <!--   </div> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import htmlLogo from "../images/HTML5_Logo.svg";
-import cssLogo from "../images/CSS3_logo_and_wordmark.svg.png";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
+import htmlLogo from "../images/html-5-svgrepo-com.svg";
+import cssLogo from "../images/css3-logo-svgrepo-com.svg";
 import jsLogo from "../images/Unofficial_JavaScript_logo_2.svg";
 import vueLogo from "../images/logo.svg";
 import nuxtLogo from "../images/icon-green.svg";
 import tailwindLogo from "../images/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg";
 
-const toolsImg = [
+const toolsName = ref("HTML");
+const toolsImg = ref(htmlLogo.src);
+const interval = ref();
+
+const nextElement = (list, value) => {
+  const currentIndex = list.indexOf(value);
+  const nextIndex = (currentIndex + 1) % list.length;
+  const nextValue = list[nextIndex];
+  return nextValue;
+};
+
+const changeTitle = () => {
+  interval.value = setInterval(() => {
+    const toolsNames = [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue JS",
+      "Nuxt",
+      "TailwindCSS",
+    ];
+    const toolsImgs = [
+      htmlLogo.src,
+      cssLogo.src,
+      jsLogo.src,
+      vueLogo.src,
+      nuxtLogo.src,
+      tailwindLogo.src,
+    ];
+    toolsName.value = nextElement(toolsNames, toolsName.value);
+    toolsImg.value = nextElement(toolsImgs, toolsImg.value);
+  }, 3000);
+};
+
+onMounted(changeTitle);
+
+onBeforeUnmount(() => clearInterval(interval.value));
+
+const toolsjImg = [
   {
-    link: htmlLogo.src,
+    // link: htmlLogo.src, cssLogo.src, jsLogo.src, vueLogo.src, nuxtLogo.src, tailwindLogo.src
     name: "HTML",
   },
   {
