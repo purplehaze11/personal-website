@@ -1,15 +1,18 @@
 ---
-import TheNavbar from '../components/TheNavbar.vue';
+import TheNavbar from "../components/TheNavbar.vue";
+import TheFooter from "../components/TheFooter.vue";
 ---
-<html lang="en" data-theme='dracula'>
+
+<html lang="en" data-theme="dracula">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-   <TheNavbar/> 
+    <TheNavbar />
     <article>
-      <slot /> 
+      <slot />
     </article>
+    <TheFooter />
   </body>
 </html>
