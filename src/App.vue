@@ -1,6 +1,6 @@
 <template>
   <header>
-    <!-- put navbar here  -->
+    <TheNavbar />
   </header>
 
   <RouterView />
@@ -8,4 +8,5 @@
 
 <script setup>
 import { RouterView } from 'vue-router'
+import TheNavbar from './components/Shared/TheNavbar.vue'
 </script>
