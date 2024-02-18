@@ -1,5 +1,9 @@
 <template>
   <div>
-    <p>project</p>
+    <ProjectCard />
   </div>
 </template>
+
+<script setup>
+import ProjectCard from './Project/ProjectCard.vue'
+</script>

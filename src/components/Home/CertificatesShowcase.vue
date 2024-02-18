@@ -1,12 +1,15 @@
 <template>
-  <div class="p-2 m-2 border-2 border-solid border-secondary">
-    <ul>
-      <li class="my-5" v-for="(certificate, index) in certificates" :key="index">
-        <a class="underline underline-offset-4" :href="certificate.link">
-          {{ certificate.name }}
-        </a>
-      </li>
-    </ul>
+  <!-- <div class="p-2 m-2 border-2 border-solid border-secondary"> -->
+  <div class="m-2 card-bordered card border-secondary">
+    <div class="py-0 card-body">
+      <ul>
+        <li class="my-5" v-for="(certificate, index) in certificates" :key="index">
+          <a class="underline underline-offset-4" :href="certificate.link" target="_blank">
+            {{ certificate.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
