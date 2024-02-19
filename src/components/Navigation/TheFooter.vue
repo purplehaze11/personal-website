@@ -1,5 +1,5 @@
 <template>
-  <footer class="p-2 text-black rounded bg-primary footer footer-center">
+  <footer class="p-2 mt-2 text-black rounded bg-primary footer footer-center">
     <nav class="grid grid-flow-col gap-4">
       <p class="text-xl">Contact me by:</p>
     </nav>

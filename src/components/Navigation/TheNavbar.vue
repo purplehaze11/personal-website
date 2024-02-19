@@ -1,11 +1,11 @@
 <template>
-  <div class="navbar bg-base-100">
+  <div class="mx-auto max-w-screen-md navbar bg-base-100">
     <div class="flex-1">
-      <a class="text-xl btn btn-ghost">Tio R.P.</a>
+      <router-link class="text-xl btn btn-ghost" to="/">Tio R. P.</router-link>
     </div>
     <div class="flex-none">
       <a class="btn btn-ghost" href="https://tayorambe.blogspot.com/" target="_blank">Blog</a>
-      <a class="btn btn-ghost" href="">About Me</a>
+      <router-link class="btn btn-ghost" to="/about">About Me</router-link>
     </div>
   </div>
 </template>

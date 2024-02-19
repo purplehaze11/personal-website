@@ -1,7 +1,9 @@
 <template>
-  <main>
+  <main class="mx-auto max-w-screen-md">
     <TheBanner />
+    <div class="mx-4 divider divider-secondary"></div>
     <ProjectShowcase />
+    <div class="mx-4 divider divider-secondary"></div>
     <CertificatesShowcase />
   </main>
 </template>
