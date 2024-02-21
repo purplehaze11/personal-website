@@ -1,22 +1,28 @@
 <template>
   <main>
-    <div class="overflow-x-auto">
-      <table class="table">
-        <tbody>
-          <tr>
-            <td>Nama</td>
-            <td>Tio Rambe Putra</td>
-          </tr>
-          <tr>
-            <td>Tempat/Tanggal Lahir</td>
-            <td>Jakarta, 11 April 2000</td>
-          </tr>
-          <tr>
-            <td>Brice Swyre</td>
-            <td>Tax Accountant</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="m-5">
+      <h1 class="text-2xl text-primary">About Me</h1>
+      <p class="text-justify">
+        Ini adalah beberapa informasi mengenai saya. Anda dapat mengunduh resume saya
+        <a @click="downloadResume" class="underline underline-offset-2 text-primary" href="#"
+          >di sini.</a
+        >
+      </p>
     </div>
+    <AboutBio />
   </main>
 </template>
+
+<script setup>
+import AboutBio from '../components/About/AboutBio.vue'
+
+const downloadResume = () => {
+  const resume = 'resume.pdf'
+  const link = document.createElement('a')
+  link.href = resume
+  link.download = 'Resume_Tio_Rambe_Putra.pdf'
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
+</script>
