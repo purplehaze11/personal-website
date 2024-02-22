@@ -10,6 +10,7 @@
         :link="item.link"
         :title="item.title"
         :button="item.button"
+        :url="item.url"
       />
     </div>
   </div>
@@ -24,11 +25,13 @@ const cardContent = ref([
   {
     link: 'home.jpeg',
     title: 'Kedai Rambe',
+    url: 'kedairambe',
     button: 'Lihat Detail'
   },
   {
     link: 'https://placehold.co/600x400?text=Coming+Soon',
     title: 'Personal Website',
+    url: 'personalwebsite',
     button: 'Coming Soon'
   }
 ])

@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="mx-auto max-w-screen-md">
     <div class="m-5">
       <h1 class="text-2xl text-primary">About Me</h1>
       <p class="text-justify">

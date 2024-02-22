@@ -9,16 +9,27 @@
         <button class="btn btn-primary" disabled>{{ props.button }}</button>
       </div>
       <div v-else class="justify-end card-actions">
-        <button class="btn btn-primary">{{ props.button }}</button>
+        <button @click="goToProject" class="btn btn-primary">{{ props.button }}</button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const props = defineProps({
   link: String,
   title: String,
-  button: String
+  button: String,
+  url: String
 })
+
+const project = props.url
+
+const goToProject = () => {
+  router.push(`/projects/${project}`)
+}
 </script>
