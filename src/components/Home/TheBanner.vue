@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between m-5">
+  <div class="flex justify-between m-4">
     <div class="w-2/5 me-4">
       <img class="rounded-full image-full" src="../../assets/foto.jpeg" alt="" />
     </div>

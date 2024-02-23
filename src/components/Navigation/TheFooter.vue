@@ -1,13 +1,23 @@
 <template>
-  <footer class="p-2 mt-5 text-black rounded bg-primary footer footer-center">
-    <nav class="grid grid-flow-col gap-4">
+  <footer class="py-2 mt-5 w-full text-black rounded bg-primary footer footer-center">
+    <nav class="">
       <p class="text-xl">Contact me by:</p>
     </nav>
     <nav>
-      <div class="grid grid-flow-col gap-4">
-        <a><IconWhatsapp /></a>
-        <a><IconLinkedin /></a>
-        <a><IconInstagram /></a>
+      <div class="flex flex-col gap-4">
+        <a class="flex">
+          <IconEmail /><span class="text-lg leading-10 ms-2">tiorambe1104@gmail.com</span>
+        </a>
+        <a class="flex" href="https://www.linkedin.com/in/tio-rambe-putra/" target="_blank">
+          <IconLinkedin /><span class="text-lg leading-10 ms-2">Tio Rambe Putra</span>
+        </a>
+        <a
+          class="flex"
+          href="https://www.instagram.com/tayorambe?igsh=MW9sbmwwaWRmaTA1Yw=="
+          target="_blank"
+        >
+          <IconInstagram /><span class="text-lg leading-10 ms-2">@tayorambe</span>
+        </a>
       </div>
     </nav>
     <aside>
@@ -19,5 +29,5 @@
 <script setup>
 import IconInstagram from '../Icon/IconInstagram.vue'
 import IconLinkedin from '../Icon/IconLinkedin.vue'
-import IconWhatsapp from '../Icon/IconWhatsapp.vue'
+import IconEmail from '../Icon/IconEmail.vue'
 </script>
