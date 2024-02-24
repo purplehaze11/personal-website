@@ -1,5 +1,5 @@
 <template>
-  <div class="my-4 mx-auto w-full shadow-xl card card-compact bg-neutral">
+  <div class="my-4 w-full shadow-xl md:w-80 card card-compact bg-neutral">
     <figure>
       <img :src="props.link" alt="Proyek" />
     </figure>

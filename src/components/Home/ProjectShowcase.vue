@@ -3,7 +3,7 @@
     <div class="my-2 mx-4">
       <h2 class="text-2xl text-primary">My Projects</h2>
     </div>
-    <div class="m-4">
+    <div class="m-4 md:flex md:flex-wrap md:gap-4 md:justify-between">
       <ProjectCard
         v-for="(item, index) in cardContent"
         :key="index"
@@ -29,7 +29,7 @@ const cardContent = ref([
     button: 'Lihat Detail'
   },
   {
-    link: 'https://placehold.co/600x400?text=Coming+Soon',
+    link: 'https://placehold.co/400x400?text=Coming+Soon',
     title: 'Personal Website',
     url: 'personalwebsite',
     button: 'Coming Soon'
