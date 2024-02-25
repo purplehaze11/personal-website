@@ -23,15 +23,21 @@ import ProjectCard from './Project/ProjectCard.vue'
 
 const cardContent = ref([
   {
-    link: 'home.jpeg',
+    link: 'kedairambehome.jpeg',
     title: 'Kedai Rambe',
     url: 'kedairambe',
     button: 'Lihat Detail'
   },
   {
-    link: 'https://placehold.co/400x400?text=Coming+Soon',
+    link: 'tiorambehome.jpeg',
     title: 'Personal Website',
     url: 'personalwebsite',
+    button: 'Lihat Detail'
+  },
+{
+    link: 'https://placehold.co/400x400?text=Coming+Soon',
+    title: 'Talky',
+    url: 'talky',
     button: 'Coming Soon'
   }
 ])

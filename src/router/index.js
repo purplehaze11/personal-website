@@ -2,9 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 // import ProjectsView from '../views/ProjectsView.vue'
-// import ProjectView from '../views/ProjectView.vue'
-// import KedaiRambe from '../components/ProjectContent/KedaiRambe.vue'
 import KedaiRambePro from '../views/KedaiRambePro.vue'
+import PersonalWebsitePro from '../views/PersonalWebsitePro.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,14 +21,11 @@ const router = createRouter({
     {
       path: '/projects',
       name: 'projects',
-      children: [{ path: 'kedairambe', component: KedaiRambePro }]
+      children: [
+        { path: 'kedairambe', component: KedaiRambePro },
+        { path: 'personalwebsite', component: PersonalWebsitePro }
+      ]
     }
-    // {
-    //   path: '/projects/:project',
-    //   name: 'project',
-    //   component: ProjectView,
-    //   children: [{ path: 'Kedai Rambe', component: KedaiRambe }]
-    // }
   ]
 })
 

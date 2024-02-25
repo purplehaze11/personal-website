@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-2 mt-5 w-full text-black rounded bg-primary footer footer-center">
+  <footer class="py-2 mt-5 w-full text-black rounded bg-secondary footer footer-center">
     <nav class="">
       <p class="text-xl">Contact me by:</p>
     </nav>
