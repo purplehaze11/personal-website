@@ -1,7 +1,7 @@
 <template>
   <main class="mx-auto max-w-screen-md">
-    <div class="m-5">
-      <h1 class="text-2xl text-primary">About Me</h1>
+    <div class="m-4">
+      <h1 class="mb-2 text-2xl text-primary">About Me</h1>
       <p class="text-justify">
         Ini adalah beberapa informasi mengenai saya. Anda dapat mengunduh resume saya
         <a @click="downloadResume" class="underline underline-offset-2 text-primary" href="#"

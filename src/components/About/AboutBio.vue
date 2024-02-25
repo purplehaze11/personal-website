@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-x-auto m-5">
+  <div class="overflow-x-auto m-4">
     <table class="table">
       <tbody>
         <tr>
